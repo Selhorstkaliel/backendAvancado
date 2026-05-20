@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.frankenstein.repository.AuthorRepositoryNPlusOneTest" time="0.502" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith\target\test-classes;c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith\target\classes;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.4\spring-boot-starter-data-jpa-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.4\spring-boot-starter-aop-3.2.4.jar;C:\Users\kali\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.4\spring-boot-starter-jdbc-3.2.4.jar;C:\Users\kali\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\kali\.m2\repository\org\springframework\spring-jdbc\6.1.5\spring-jdbc-6.1.5.jar;C:\Users\kali\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\kali\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\kali\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\kali\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\kali\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\kali\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\kali\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\kali\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\kali\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\kali\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\kali\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\kali\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\kali\.m2\repository\org\springframework\data\spring-data-jpa\3.2.4\spring-data-jpa-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\data\spring-data-commons\3.2.4\spring-data-commons-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\spring-orm\6.1.5\spring-orm-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-context\6.1.5\spring-context-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-tx\6.1.5\spring-tx-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-beans\6.1.5\spring-beans-6.1.5.jar;C:\Users\kali\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\kali\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\kali\.m2\repository\org\springframework\spring-aspects\6.1.5\spring-aspects-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.4\spring-boot-starter-security-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.4\spring-boot-starter-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot\3.2.4\spring-boot-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.4\spring-boot-autoconfigure-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.4\spring-boot-starter-logging-3.2.4.jar;C:\Users\kali\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\kali\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\kali\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\kali\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\kali\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\kali\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\kali\.m2\repository\org\springframework\spring-aop\6.1.5\spring-aop-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-config\6.2.3\spring-security-config-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-web\6.2.3\spring-security-web-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\spring-expression\6.1.5\spring-expression-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.4\spring-boot-starter-web-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.4\spring-boot-starter-json-3.2.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.4\spring-boot-starter-tomcat-3.2.4.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\kali\.m2\repository\org\springframework\spring-web\6.1.5\spring-web-6.1.5.jar;C:\Users\kali\.m2\repository\io\micrometer\micrometer-observation\1.12.4\micrometer-observation-1.12.4.jar;C:\Users\kali\.m2\repository\io\micrometer\micrometer-commons\1.12.4\micrometer-commons-1.12.4.jar;C:\Users\kali\.m2\repository\org\springframework\spring-webmvc\6.1.5\spring-webmvc-6.1.5.jar;C:\Users\kali\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.5\jjwt-api-0.12.5.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.5\jjwt-impl-0.12.5.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.5\jjwt-jackson-0.12.5.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\kali\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.4\spring-boot-starter-test-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-test\3.2.4\spring-boot-test-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.4\spring-boot-test-autoconfigure-3.2.4.jar;C:\Users\kali\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\kali\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\kali\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\kali\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\kali\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\kali\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\kali\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\kali\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\kali\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\kali\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\kali\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\kali\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\kali\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\kali\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\kali\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\kali\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\kali\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\kali\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\kali\.m2\repository\org\springframework\spring-core\6.1.5\spring-core-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-jcl\6.1.5\spring-jcl-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-test\6.1.5\spring-test-6.1.5.jar;C:\Users\kali\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-test\6.2.3\spring-security-test-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-core\6.2.3\spring-security-core-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-crypto\6.2.3\spring-security-crypto-6.2.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\kali\AppData\Local\Temp\surefire5278994069867628466\surefirebooter-20260520123911608_3.jar C:\Users\kali\AppData\Local\Temp\surefire5278994069867628466 2026-05-20T12-39-11_458-jvmRun1 surefire-20260520123911608_1tmp surefire_0-20260520123911608_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith\target\test-classes;c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith\target\classes;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.4\spring-boot-starter-data-jpa-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.4\spring-boot-starter-aop-3.2.4.jar;C:\Users\kali\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.4\spring-boot-starter-jdbc-3.2.4.jar;C:\Users\kali\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\kali\.m2\repository\org\springframework\spring-jdbc\6.1.5\spring-jdbc-6.1.5.jar;C:\Users\kali\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\kali\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\kali\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\kali\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\kali\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\kali\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\kali\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\kali\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\kali\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\kali\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\kali\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\kali\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\kali\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\kali\.m2\repository\org\springframework\data\spring-data-jpa\3.2.4\spring-data-jpa-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\data\spring-data-commons\3.2.4\spring-data-commons-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\spring-orm\6.1.5\spring-orm-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-context\6.1.5\spring-context-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-tx\6.1.5\spring-tx-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-beans\6.1.5\spring-beans-6.1.5.jar;C:\Users\kali\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\kali\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\kali\.m2\repository\org\springframework\spring-aspects\6.1.5\spring-aspects-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.4\spring-boot-starter-security-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.4\spring-boot-starter-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot\3.2.4\spring-boot-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.4\spring-boot-autoconfigure-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.4\spring-boot-starter-logging-3.2.4.jar;C:\Users\kali\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\kali\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\kali\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\kali\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\kali\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\kali\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\kali\.m2\repository\org\springframework\spring-aop\6.1.5\spring-aop-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-config\6.2.3\spring-security-config-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-web\6.2.3\spring-security-web-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\spring-expression\6.1.5\spring-expression-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.4\spring-boot-starter-web-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.4\spring-boot-starter-json-3.2.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.4\spring-boot-starter-tomcat-3.2.4.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\kali\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\kali\.m2\repository\org\springframework\spring-web\6.1.5\spring-web-6.1.5.jar;C:\Users\kali\.m2\repository\io\micrometer\micrometer-observation\1.12.4\micrometer-observation-1.12.4.jar;C:\Users\kali\.m2\repository\io\micrometer\micrometer-commons\1.12.4\micrometer-commons-1.12.4.jar;C:\Users\kali\.m2\repository\org\springframework\spring-webmvc\6.1.5\spring-webmvc-6.1.5.jar;C:\Users\kali\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.5\jjwt-api-0.12.5.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.5\jjwt-impl-0.12.5.jar;C:\Users\kali\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.5\jjwt-jackson-0.12.5.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\kali\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\kali\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.4\spring-boot-starter-test-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-test\3.2.4\spring-boot-test-3.2.4.jar;C:\Users\kali\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.4\spring-boot-test-autoconfigure-3.2.4.jar;C:\Users\kali\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\kali\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\kali\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\kali\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\kali\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\kali\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\kali\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\kali\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\kali\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\kali\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\kali\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\kali\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\kali\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\kali\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\kali\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\kali\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\kali\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\kali\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\kali\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\kali\.m2\repository\org\springframework\spring-core\6.1.5\spring-core-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-jcl\6.1.5\spring-jcl-6.1.5.jar;C:\Users\kali\.m2\repository\org\springframework\spring-test\6.1.5\spring-test-6.1.5.jar;C:\Users\kali\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-test\6.2.3\spring-security-test-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-core\6.2.3\spring-security-core-6.2.3.jar;C:\Users\kali\.m2\repository\org\springframework\security\spring-security-crypto\6.2.3\spring-security-crypto-6.2.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\kali"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\kali\AppData\Local\Temp\surefire5278994069867628466\surefirebooter-20260520123911608_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
+    <property name="user.name" value="kali"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\kali\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\kali\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="17260"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\kali\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\kali\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\kali\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\kali\.local\bin;C:\Users\kali\AppData\Local\Microsoft\WindowsApps;C:\Users\kali\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kali\AppData\Local\Programs\Azure Dev CLI\;C:\Users\kali\AppData\Roaming\npm;C:\Users\kali\AppData\Local\GitHubDesktop\bin;C:\Users\kali\AppData\Local\Python\bin;C:\Users\kali\AppData\Local\Microsoft\WinGet\Links;;C:\Users\kali\AppData\Local\Programs\Ollama;c:\Users\kali\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\scripts\noConfigScripts;c:\Users\kali\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS-69"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[frankenstein-monolith] "/>
+  </properties>
+  <testcase name="shouldLoadAuthorsAndBooksWithSingleQueryUsingFetchJoin" classname="com.example.frankenstein.repository.AuthorRepositoryNPlusOneTest" time="0.063">
+    <system-out><![CDATA[2026-05-20T12:39:18.999-03:00  INFO 17260 --- [frankenstein-monolith] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.frankenstein.repository.AuthorRepositoryNPlusOneTest]: AuthorRepositoryNPlusOneTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-20T12:39:19.031-03:00  INFO 17260 --- [frankenstein-monolith] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.frankenstein.FrankensteinApplication for test class com.example.frankenstein.repository.AuthorRepositoryNPlusOneTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-05-20T12:39:19.080-03:00  INFO 17260 --- [frankenstein-monolith] [           main] c.e.f.r.AuthorRepositoryNPlusOneTest     : Starting AuthorRepositoryNPlusOneTest using Java 25.0.2 with PID 17260 (started by kali in c:\Users\kali\Documents\GitHub\backendAvancado\frankenstein-monolith)
+2026-05-20T12:39:19.081-03:00  INFO 17260 --- [frankenstein-monolith] [           main] c.e.f.r.AuthorRepositoryNPlusOneTest     : The following 1 profile is active: "test"
+2026-05-20T12:39:19.178-03:00  INFO 17260 --- [frankenstein-monolith] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T12:39:19.193-03:00  INFO 17260 --- [frankenstein-monolith] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2026-05-20T12:39:19.202-03:00  INFO 17260 --- [frankenstein-monolith] [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-05-20T12:39:19.217-03:00  INFO 17260 --- [frankenstein-monolith] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:1056ebdb-79f7-4741-abcb-32574d82d4c0;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-05-20T12:39:19.235-03:00  INFO 17260 --- [frankenstein-monolith] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-20T12:39:19.239-03:00  INFO 17260 --- [frankenstein-monolith] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-20T12:39:19.243-03:00  INFO 17260 --- [frankenstein-monolith] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T12:39:19.245-03:00  WARN 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-20T12:39:19.294-03:00  INFO 17260 --- [frankenstein-monolith] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T12:39:19.295-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : drop table if exists app_user cascade 
+Hibernate: drop table if exists app_user cascade 
+2026-05-20T12:39:19.295-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : drop table if exists author cascade 
+Hibernate: drop table if exists author cascade 
+2026-05-20T12:39:19.295-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : drop table if exists book cascade 
+Hibernate: drop table if exists book cascade 
+2026-05-20T12:39:19.296-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : create table app_user (id bigint generated by default as identity, password varchar(255) not null, user_role varchar(255) not null check (user_role in ('ADMIN','USER')), username varchar(255) not null unique, primary key (id))
+Hibernate: create table app_user (id bigint generated by default as identity, password varchar(255) not null, user_role varchar(255) not null check (user_role in ('ADMIN','USER')), username varchar(255) not null unique, primary key (id))
+2026-05-20T12:39:19.297-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : create table author (annual_income float(53), id bigint generated by default as identity, cpf varchar(255), name varchar(255), primary key (id))
+Hibernate: create table author (annual_income float(53), id bigint generated by default as identity, cpf varchar(255), name varchar(255), primary key (id))
+2026-05-20T12:39:19.298-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : create table book (author_id bigint, id bigint generated by default as identity, title varchar(255), primary key (id))
+Hibernate: create table book (author_id bigint, id bigint generated by default as identity, title varchar(255), primary key (id))
+2026-05-20T12:39:19.299-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : alter table if exists book add constraint FKklnrv3weler2ftkweewlky958 foreign key (author_id) references author
+Hibernate: alter table if exists book add constraint FKklnrv3weler2ftkweewlky958 foreign key (author_id) references author
+2026-05-20T12:39:19.303-03:00  INFO 17260 --- [frankenstein-monolith] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T12:39:19.315-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.319-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.326-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.327-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.329-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.332-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.335-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.339-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.340-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.343-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.343-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2026-05-20T12:39:19.384-03:00  INFO 17260 --- [frankenstein-monolith] [           main] c.e.f.r.AuthorRepositoryNPlusOneTest     : Started AuthorRepositoryNPlusOneTest in 0.35 seconds (process running for 7.629)
+2026-05-20T12:39:19.413-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select count(*) from author a1_0
+Hibernate: select count(*) from author a1_0
+2026-05-20T12:39:19.432-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select distinct a1_0.id,a1_0.annual_income,b1_0.author_id,b1_0.id,b1_0.title,a1_0.cpf,a1_0.name from author a1_0 left join book b1_0 on a1_0.id=b1_0.author_id
+Hibernate: select distinct a1_0.id,a1_0.annual_income,b1_0.author_id,b1_0.id,b1_0.title,a1_0.cpf,a1_0.name from author a1_0 left join book b1_0 on a1_0.id=b1_0.author_id
+2026-05-20T12:39:19.449-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    365600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1703800 nanoseconds spent preparing 2 JDBC statements;
+    1974900 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    19800 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldShowNPlusOneBehaviorWhenUsingDefaultFindAllAndTraversingBooks" classname="com.example.frankenstein.repository.AuthorRepositoryNPlusOneTest" time="0.044">
+    <system-out><![CDATA[2026-05-20T12:39:19.455-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select count(*) from author a1_0
+Hibernate: select count(*) from author a1_0
+2026-05-20T12:39:19.458-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select a1_0.id,a1_0.annual_income,a1_0.cpf,a1_0.name from author a1_0
+Hibernate: select a1_0.id,a1_0.annual_income,a1_0.cpf,a1_0.name from author a1_0
+2026-05-20T12:39:19.469-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.469-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-20T12:39:19.471-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.471-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [2]
+2026-05-20T12:39:19.472-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.472-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
+2026-05-20T12:39:19.472-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.472-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [4]
+2026-05-20T12:39:19.473-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.473-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [5]
+2026-05-20T12:39:19.474-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.474-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [6]
+2026-05-20T12:39:19.475-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.475-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [7]
+2026-05-20T12:39:19.475-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.475-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [8]
+2026-05-20T12:39:19.476-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.476-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [9]
+2026-05-20T12:39:19.476-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.476-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [10]
+2026-05-20T12:39:19.476-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.476-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [11]
+2026-05-20T12:39:19.476-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.476-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [12]
+2026-05-20T12:39:19.477-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.477-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [13]
+2026-05-20T12:39:19.477-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.477-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [14]
+2026-05-20T12:39:19.477-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.478-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [15]
+2026-05-20T12:39:19.478-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.478-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [16]
+2026-05-20T12:39:19.478-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.478-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [17]
+2026-05-20T12:39:19.479-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.479-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [18]
+2026-05-20T12:39:19.479-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.479-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [19]
+2026-05-20T12:39:19.479-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.479-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [20]
+2026-05-20T12:39:19.481-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.481-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [21]
+2026-05-20T12:39:19.481-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.481-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [22]
+2026-05-20T12:39:19.482-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.482-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [23]
+2026-05-20T12:39:19.482-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.482-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [24]
+2026-05-20T12:39:19.482-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.482-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [25]
+2026-05-20T12:39:19.483-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.483-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [26]
+2026-05-20T12:39:19.483-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.483-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [27]
+2026-05-20T12:39:19.483-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.483-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [28]
+2026-05-20T12:39:19.484-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.484-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [29]
+2026-05-20T12:39:19.484-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.484-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [30]
+2026-05-20T12:39:19.484-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.484-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [31]
+2026-05-20T12:39:19.485-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.485-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [32]
+2026-05-20T12:39:19.485-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.485-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [33]
+2026-05-20T12:39:19.485-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.485-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [34]
+2026-05-20T12:39:19.486-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.486-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [35]
+2026-05-20T12:39:19.486-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.486-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [36]
+2026-05-20T12:39:19.486-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.487-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [37]
+2026-05-20T12:39:19.487-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.487-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [38]
+2026-05-20T12:39:19.487-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.487-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [39]
+2026-05-20T12:39:19.488-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.488-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [40]
+2026-05-20T12:39:19.488-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.489-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [41]
+2026-05-20T12:39:19.489-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.489-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [42]
+2026-05-20T12:39:19.489-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.489-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [43]
+2026-05-20T12:39:19.490-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.490-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [44]
+2026-05-20T12:39:19.490-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.490-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [45]
+2026-05-20T12:39:19.490-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.490-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [46]
+2026-05-20T12:39:19.490-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.490-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [47]
+2026-05-20T12:39:19.490-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.490-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [48]
+2026-05-20T12:39:19.491-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.491-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [49]
+2026-05-20T12:39:19.492-03:00 DEBUG 17260 --- [frankenstein-monolith] [           main] org.hibernate.SQL                        : select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+Hibernate: select b1_0.author_id,b1_0.id,b1_0.title from book b1_0 where b1_0.author_id=?
+2026-05-20T12:39:19.492-03:00 TRACE 17260 --- [frankenstein-monolith] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [50]
+2026-05-20T12:39:19.495-03:00  INFO 17260 --- [frankenstein-monolith] [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    536100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1190700 nanoseconds spent preparing 52 JDBC statements;
+    4445300 nanoseconds spent executing 52 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+]]></system-out>
+  </testcase>
+</testsuite>

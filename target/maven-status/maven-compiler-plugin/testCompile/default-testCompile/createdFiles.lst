@@ -1,0 +1,6 @@
+com\example\frankenstein\BookEndpointIntegrationTest.class
+com\example\frankenstein\security\SecurityIntegrationTest.class
+com\example\frankenstein\application\service\AuthorApplicationServiceTest.class
+com\example\frankenstein\domain\service\CpfValidatorTest.class
+com\example\frankenstein\repository\AuthorRepositoryNPlusOneTest.class
+com\example\frankenstein\domain\service\TaxCalculatorTest.class

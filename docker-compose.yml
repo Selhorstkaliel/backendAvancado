@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      APP_JWT_SECRET: ${APP_JWT_SECRET:-super-secret-key-with-at-least-32-bytes}
+      APP_ADMIN_USERNAME: ${APP_ADMIN_USERNAME:-admin}
+      APP_ADMIN_PASSWORD_BCRYPT: ${APP_ADMIN_PASSWORD_BCRYPT:-{noop}admin123}
+      APP_USER_USERNAME: ${APP_USER_USERNAME:-user}
+      APP_USER_PASSWORD_BCRYPT: ${APP_USER_PASSWORD_BCRYPT:-{noop}user123}
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "8081:80"
